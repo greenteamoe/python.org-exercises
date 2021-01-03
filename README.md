@@ -3,4 +3,4 @@
 
 List of all complete resolutions are available on their website: [wiki.python.org.br](https://wiki.python.org.br/ListaDeExercicios)
 
-![](header.png)
+![](header2.png)
