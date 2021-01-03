@@ -181,15 +181,17 @@ print("O seu peso ideal é de: {0:.0f}kg".format(peso))
 # que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
 
 
+'''
+peso_peixe = float(input("Qual é o peso do peixe? "))
 
+if peso_peixe > 50:
 
+   print("O peso do peixe está acima do permitido você sofrera um multa de",(peso_peixe - 50)*4 , "R$")
 
+else:
 
-
-
-
-
-
+   print("O peixe está em peso permitido.")
+'''
 
 
 # 1.15 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.
@@ -224,8 +226,21 @@ print(Fore.RESET + "Salário liquido: " + Fore.GREEN + "R${0:.2f}".format(salari
 # Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros,
 # que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
 
+'''
 
+tamanho = int(input('Tamanho em metros quadrados: '))
+litros = tamanho / 3
 
+if tamanho % 54 == 0:
+	latas = tamanho / 54
+else: 
+	latas = int(tamanho / 54) + 1
+
+preco = latas * 80
+print ('%d latas' %latas)
+print ('R$ %.2f' %preco)
+
+'''
 
 
 # 1.17 - Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
