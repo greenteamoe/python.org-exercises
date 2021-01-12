@@ -75,10 +75,16 @@ while estado_civil != 's' and estado_civil != 'c' and estado_civil != 'v' and es
 # 3.6 - Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro.
 # Depois modifique o programa para que ele mostre os números um ao lado do outro.
 
+'''
 
+#vertical
+for i in range(1, 21):
+    print(i)
+#horizontal
+for i in range(1, 21):
+    print(i, end=' ')
 
-
-
+'''
 
 
 
@@ -142,11 +148,67 @@ print("o valor de {0} elevado a {1} é: {2}".format(base, expo, potencia))
 # 3.11 - Faça um programa que peça 10 números inteiros,
 # calcule e mostre a quantidade de números pares e a quantidade de números impares.
 
+# 1st method:
 
+'''
+
+n1 = int(input("\nDigite o número: "))
+n2 = int(input("Digite o número: "))
+n3 = int(input("Digite o número: "))
+n4 = int(input("Digite o número: "))
+n5 = int(input("Digite o número: "))
+n6 = int(input("Digite o número: "))
+n7 = int(input("Digite o número: "))
+n8 = int(input("Digite o número: "))
+n9 = int(input("Digite o número: "))
+n10 = int(input("Digite o número: "))
+list1 = [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10]
+
+par = 0
+impar = 0
+
+for value in list1:
+    if value % 2 == 0:
+        par = par + 1
+    else:
+        impar = impar + 1
+
+print("Par: ", par, "\nImpar: ", impar)
+
+#2nd method:
+
+n = 1
+P = 0
+I = 0
+while n <= 10:
+    a = int(input())
+    n = n + 1
+    if a % 2 == 0:
+        P = P + 1
+    else:
+        I = I + 1
+
+print("A qtd de números pares é: ", P)
+print("A qtd de números ímpares é: ", P) 
+
+'''
 
 # 3.12 - A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... 
 # Faça um programa capaz de gerar a série até o n−ésimo termo.
 
+'''
+
+quantos = int(input("Quantos fibonacci vai querer? "))
+anterior = 0
+seguinte = 1
+fibo = []
+for i in range(quantos):
+    fibo.append( anterior )
+    anterior , seguinte  = seguinte, anterior + seguinte
+
+print(fibo)
+
+'''
 
 # 3.13 - A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... 
 # Faça um programa que gere a série até que o valor seja maior que 500.
@@ -158,9 +220,42 @@ print("o valor de {0} elevado a {1} é: {2}".format(base, expo, potencia))
 # 3.15 - Faça um programa que, dado um conjunto de N números, 
 # determine o menor valor, o maior valor e a soma dos valores.
 
+'''
+
+lista = []
+count = 0
+
+quant = int(input("Digite a quantiade de número que deseja digitar: "))
+while quant != count:
+    numero = lista.append(float(input("Digite um número: ")))
+    count += 1
+
+print("Lista: ", lista, "\nMaior: ", max(lista), "\nMenor: ", min(lista))
+print("Soma: ", max(lista) + min(lista))
+
+'''
 
 # 3.16 - Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.
 
+'''
+
+lista = []
+count = 0
+
+quant = int(input("Digite a quantiade de números que deseja digitar: "))
+while quant != count:
+    numero = int(input("Digite um número: "))
+
+    while numero > 1000 or numero < 0:
+        numero = int(input("Digite um número[erro]: "))
+        
+    lista.append(numero)
+    count += 1
+
+print("Lista: ", lista, "\nMaior: ", max(lista), "\nMenor: ", min(lista))
+print("Soma: ", max(lista) + min(lista))
+
+'''
 
 # 3.17 - Altere o programa de cálculo do fatorial, permitindo ao usuário calcular o fatorial várias vezes 
 # e limitando o fatorial a números inteiros positivos e menores que 16.
