@@ -264,10 +264,44 @@ print("Soma: ", max(lista) + min(lista))
 # 3.18 - Faça um programa que peça um número inteiro e determine se ele é ou não um número primo.
 #  Um número primo é aquele que é divisível somente por ele mesmo e por 1.
 
+'''
+
+num = int(input("Digite um número: "))
+contador = 0
+
+for i in range(1, num + 1):
+    if num % i == 0:
+        contador += 1
+
+print("O número {} foi divisível {} vezes!".format(num, contador))
+
+if contador == 2:
+    print("O número é primo")
+else:
+    print("O número não é primo")
+
+'''
 
 # 3.19 - Altere o programa de cálculo dos números primos, 
 # informando, caso o número não seja primo, por quais número ele é divisível.
 
+'''
+
+num = int(input("Digite um número: "))
+contador = 0
+
+for i in range(1, num + 1):
+    if num % i == 0:
+        contador += 1
+
+print("O número {} foi divisível {} vezes!".format(num, contador))
+
+if contador == 2:
+    print("O número é primo")
+else:
+    print("O número não é primo")
+
+'''
 
 # 3.20 - Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário.
 #  O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos. 
@@ -276,6 +310,16 @@ print("Soma: ", max(lista) + min(lista))
 
 # 3.21 - Faça um programa que calcule o mostre a média aritmética de N notas.
 
+'''
+
+m1 = float(input("Primeira nota: "))
+m2 = float(input("Segunda nota: "))
+
+media = (m1 + m2) / 2
+
+print("Média: {0}".format(media))
+
+'''
 
 # 3.22 - Faça um programa que peça para n pessoas a sua idade,
 #  ao final o programa devera verificar se a média de idade da turma varia entre 0 e 25,26 e 60 e maior que 60;
